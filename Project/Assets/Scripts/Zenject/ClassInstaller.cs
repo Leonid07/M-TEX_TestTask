@@ -2,15 +2,15 @@ using Zenject;
 
 public class ClassInstaller : MonoInstaller
 {
-    // Метод InstallBindings вызывается для установки привязок в контейнере Zenject.
+    // РњРµС‚РѕРґ InstallBindings РІС‹Р·С‹РІР°РµС‚СЃСЏ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РїСЂРёРІСЏР·РѕРє РІ РєРѕРЅС‚РµР№РЅРµСЂРµ Zenject.
     public override void InstallBindings()
     {
-        // Привязка классов к их экземплярам в контейнере Zenject.
-        Container.Bind<Menu>().FromInstance(FindObjectOfType<Menu>()).AsTransient(); // Привязка класса Menu
-        Container.Bind<PlayerShooting>().FromInstance(FindObjectOfType<PlayerShooting>()).AsSingle(); // Привязка класса PlayerShooting
-        Container.Bind<PlayerMoving>().FromInstance(FindObjectOfType<PlayerMoving>()).AsSingle(); // Привязка класса PlayerMoving
-        Container.Bind<Player>().FromInstance(FindObjectOfType<Player>()).AsSingle(); // Привязка класса Player
+        // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃРѕРІ Рє РёС… СЌРєР·РµРјРїР»СЏСЂР°Рј РІ РєРѕРЅС‚РµР№РЅРµСЂРµ Zenject.
+        Container.Bind<Menu>().FromInstance(FindObjectOfType<Menu>()).AsTransient(); // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃР° Menu
+        Container.Bind<PlayerShooting>().FromInstance(FindObjectOfType<PlayerShooting>()).AsSingle(); // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃР° PlayerShooting
+        Container.Bind<PlayerMoving>().FromInstance(FindObjectOfType<PlayerMoving>()).AsSingle(); // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃР° PlayerMoving
+        Container.Bind<Player>().FromInstance(FindObjectOfType<Player>()).AsSingle(); // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃР° Player
 
-        Container.Bind<DropDownBonus>().FromComponentSibling().AsTransient(); // Привязка класса DropDownBonus
+        Container.Bind<DropDownBonus>().FromComponentSibling().AsTransient(); // РџСЂРёРІСЏР·РєР° РєР»Р°СЃСЃР° DropDownBonus
     }
 }
